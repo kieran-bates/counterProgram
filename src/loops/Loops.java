@@ -23,14 +23,17 @@ public class Loops {
         int countUntil;
         int countBy;
         int programSelection;
+        boolean programStop = false;
         Scanner input = new Scanner(System.in);
-        
+    while(programStop == false)
+    {
         System.out.println("COUNTER PROGRAM");
         System.out.println("\nPlease enter your choice:");
         System.out.println("1 ... Count from 0 to 10 by 1");
         System.out.println("2 ... Count from 100 to 0 by 10");
         System.out.println("3 ... Count from 50 to 500 by 50");
         System.out.println("4 ... Count from 6000 to 1000 by 1000");
+        System.out.println("5 ... Terminate Program");
         System.out.print("\nEnter choice here --> ");
         programSelection = input.nextInt();
         
@@ -46,6 +49,49 @@ public class Loops {
             }
             System.out.println("***COUNT COMPLETE!***");
         }
+        
+        if(programSelection == 2)
+        {
+            countFrom = 100;
+            countUntil = 0;
+            countBy = 10;
+            
+            for(int i = countFrom; i>=countUntil; i=i-countBy)
+            {
+                System.out.println(i);
+            }
+            System.out.println("***COUNT COMPLETE!***");
+        }
+        
+        if(programSelection == 3)
+        {
+            countFrom = 50;
+            countUntil = 500;
+            countBy = 50;
+            
+            for(int i = countFrom; i<=countUntil; i=i+countBy)
+            {
+                System.out.println(i);
+            }
+            System.out.println("***COUNT COMPLETE!***");
+        }
+        
+        if(programSelection == 4)
+        {
+            countFrom = 6000;
+            countUntil = 1000;
+            countBy = 1000;
+            
+            for(int i = countFrom; i>=countUntil; i=i-countBy)
+            {
+                System.out.println(i);
+            }
+            System.out.println("***COUNT COMPLETE!***");
+        }
+        if(programSelection == 5)
+        {
+            programStop = true;
+        }
     }
-    
+    } 
 }
